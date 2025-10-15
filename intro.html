@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Nguyễn Đặng Tấn Hưng</title>
+  <link rel="stylesheet" href="intro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="intro fade-in">
+    <div class="intro-content">
+      <h3 class="subtitle">My Portfolio</h3>
+      <h1 class="title">Nguyễn Đặng Tấn Hưng</h1>
+      <h2 class="role">Software Developer</h2>
+      <a href="index.html" class="enter-btn">Enter Portfolio</a>
+    </div>
+  </div>
+
+  <script>
+    // Hiệu ứng fade-out và tự chuyển sau 3 giây
+    setTimeout(() => {
+      document.querySelector('.intro').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000); // đợi 1s để hiệu ứng fade out hoàn tất
+    }, 3000);
+
+    // Nếu click "Enter" thì chuyển ngay
+    document.querySelector('.enter-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('.intro').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 800);
+    });
+  </script>
+</body>
+</html>

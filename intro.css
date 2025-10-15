@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.intro {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 40% 40%, #7b3eff, #2b004f 75%);
+  color: white;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.intro-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+.role {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #d48cff, #8a2eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 6px 6px 12px rgba(0,0,0,0.5);
+}
+
+.enter-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #8a2eff, #c084fc);
+  box-shadow: 0 4px 20px rgba(160, 82, 255, 0.5);
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(190, 110, 255, 0.7);
+}
